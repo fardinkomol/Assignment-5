@@ -1,0 +1,22 @@
+.bg-color{
+    background-color:#383838; 
+    
+}
+.card-color{
+    background-color: 	#505050;
+}
+
+/*Simple Animation */
+@keyframes flicker1 {
+    from {
+      text-shadow:
+      0 0 5px #00dcff,0 0 10px #00dcff,
+      0 0 20px #00dcff, 0 0 40px #00dcff;
+    }
+    to {
+      text-shadow:
+      0 0 5px #09889c, 0 0 10px #09889c,
+      0 0 20px #09889c, 0 0 40px #09889c;
+    }
+  }
+.flick1 { animation: flicker1 1s ease-in-out infinite alternate; }

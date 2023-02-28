@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top-5 Players</title>
+    <link rel="shortcut icon" href="images/logo-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body class="bg-color text-white">
+
+    <header class="bg-dark text-danger justify-content-center  d-flex py-5 mb-5">
+        <h1 class="py-5  flick1"><i>Top-5 Players Selected By You</i></h1> 
+    </header>
+
+    
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-5 bg-dark">
+              <img class="img-fluid" src="images/gundagon.jpg" alt="">
+              <h2 class="text-center">Ilkay Gundogan</h2>
+              <p class="text-center">Season Goal: 23</p>
+              <div class="d-grid mt-4">
+                <button id="btn-ilkay" class="btn btn-danger border border-dark border-3 rounded rounded-0" type="button" onclick="addToCart(this)">SELECT (ILKAY)</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-5 card-color">
+              <img class="img-fluid" src="images/jamal1.jpg" alt="">
+              <h2 class="text-center">Jamal Musiaala</h2>
+              <p class="text-center">Season Goal: 44</p>
+              <div class="d-grid mt-4">
+                <button id="btn-jamal" class="btn btn-success border border-dark border-3 rounded rounded-0" type="button" onclick="addToCart(this)">SELECT (JAMAL)</button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-5 bg-dark">
+              <img class="img-fluid" src="images/messi.jpg" alt="">
+              <h2 class="text-center">Lionel Messi</h2>
+              <p class="text-center">Season Goal: 45</p>
+              <div class="d-grid mt-4">
+                <button id="btn-messi" class="btn btn-danger border border-dark border-3 rounded rounded-0" type="button" onclick="addToCart(this)">SELECT (MESSI)</button>
+              </div>
+          </div>
+
+            <!-- Player Choose Start -->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 border border-2 border-secondary mb-2">
+              <table>
+                <thead >
+                    <tr>
+                      <h4 class="text-center"><u>SELECT - 5</u></h4>
+                    </tr>
+                </thead>
+                <tbody id="player-selection">
+                      
+                </tbody>
+              </table>
+            </div>
+            
+            <!-- Player Choose End -->
+
+            <div class="col-lg-3 col-md-3 col-sm-6 col-6  mb-5 card-color">
+                <img class="img-fluid" src="images/neymar.jpg" alt="">
+                <h2 class="text-center">Neymar Junior</h2>
+                <p class="text-center">Season Goal: 47</p>
+                  <div class="d-grid mt-4">
+                    <button id="btn-neymar" class="btn btn-success border border-dark border-3 rounded rounded-0" type="button" onclick="addToCart(this)">SELECT (NEYMAR)</button>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-5 bg-dark">
+                <img class="img-fluid" src="images/ronaldo.jpg" alt="">
+                <h2 class="text-center">Cristiano Ronaldo</h2>
+                <p class="text-center">Season Goal: 45</p>
+                <div class="d-grid mt-4">
+                    <button id="btn-ronaldo" class="btn btn-danger border border-dark border-3 rounded rounded-0" type="button" onclick="addToCart(this)">SELECT (RONALDO)</button>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-6 mb-5 card-color">
+                <img class="img-fluid" src="images/rudiger.jpeg" alt="">
+                <h2 class="text-center">Antonio Rüdiger</h2>
+                <p class="text-center">Season Goal: 12</p>
+                  <div class="d-grid mt-4">
+                    <button id="btn-rudiger" class="btn btn-success border border-dark border-3 rounded rounded-0" type="button" onclick="addToCart(this)">SELECT (RUDIGER)</button>
+                  </div>
+              </div>
+
+              <!-- Price Start -->
+              <div class="col-lg-3 col-md-3 col-sm-6 col-12 border border-2 border-secondary">
+                    <h4 class="text-center"><u> BUDGET</u></h4>
+                    <div class="d-flex">
+                        <div class="col-md-4">
+                          <p class="">Per Player</p> 
+                        </div>
+                        <div class="col-md-8">
+                          <input id="per-player-cost" type="number" aria-label="First name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button id="btn-calculate" class="btn btn-secondary  border border-dark border-4 rounded rounded-0" type="button">Calculate</button>
+                    </div>
+                    <div class="mt-3">
+                        <p><span>Player Expenses: </span> <span class="text-danger fw-bold"> $</span><span id="player-price" class="text-danger fw-bold">00</span></p>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                      <p class="me-4">Manager</p> 
+                      <input id="manager-price" type="number" aria-label="First name" class="form-control">
+                    </div>
+
+                    <div class="d-flex mb-3">
+                      <p class="me-4">Coach:</p> 
+                      <input id="coach-price" aria-label="First name" class="ms-3 form-control" type="number">
+                    </div>
+
+                    <div class="d-grid mt-0">
+                        <button id="btn-total" class="btn btn-secondary border border-dark border-4 rounded rounded-0" type="button">Calculate Total</button>
+                    </div>
+                    <div class="mt-1">
+                        <p class="text-center"><span>Toal: </span> <span class="text-danger fw-bold"> $</span><span id="total-output" class="text-danger fw-bold">00</span></p>
+                    </div>
+              </div>
+              <!-- Price End -->
+        </div>
+    </section>
+
+    <!-- JavaScript Start -->
+    <script src="js/selection.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/calculation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- JavaScript End -->
+  </body>
+
+  <!-- footer Start -->
+  <footer class="bg-dark mt-5 py-5 text-center flick1">
+    <p>Copyright@ 2022 All Rights Reserved</p>
+    <p>Fardin Alam</p>
+  </footer>
+  <!-- footer end -->
+</html>
